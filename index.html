@@ -4,52 +4,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Board</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 <body class="">
-    <nav class="flex  justify-between  p-5">
-        <div class="flex bg-blue-50 p-5 rounded-2xl">
-            <img class="w-8 h-8" src="./assets/logo.png" alt="">
-            <h1 class="text-2xl"><span class="font-mono text-gray-400">Dev</span><span class="font-bold">Bord</span></h1>
+
+    <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between rounded-l-xl items-center shadow-sm gap-4">
+        <div class="flex bg-blue-50 p-4 rounded-2xl items-center space-x-2">
+            <img class="w-8 h-8 object-contain" src="./assets/logo.png" alt="">
+            <h1 class="text-2xl">
+                <span class="font-mono text-gray-400">Dev</span>
+                <span class="font-bold">Board</span>
+            </h1>
         </div>
-        <div class="flex justify-between" >
-            <div class="  px-5 flex rounded rounded-b-full bg-blue-50">
-                <img class="w-8 h-8" src="./assets/checkbox.png" alt="">
-            <h1 class="font-bold">23</h1>
+
+        
+        <div class="flex items-center gap-4">
+            <div class="px-4 py-2 flex items-center space-x-2 bg-blue-50 rounded-full">
+                <img class="w-6 h-6 object-contain" src="./assets/checkbox.png" alt="">
+                <span class="font-bold">23</span>
             </div>
-            <div class=" "><img class=" w-8 h-8" src="./assets/theme-btn.png" alt=""></div>
+            <button class="p-2 bg-blue-50 rounded-full transition-colors">
+                <img class="w-6 h-6 " src="./assets/theme-btn.png" alt="">
+            </button>
         </div>
-    
+
     </nav>
-    <header>
-        <section class="flex justify-between">
-            <div class="bg-blue-50">
-                <img class="w-8 h-8" src="./assets/checkbox.png" alt="">
-                <h4>Task Assigned <br> <span class="text-2xl">05</span></h4>
+
+    <header class="container mx-auto px-4 py-6">
+        <section class="grid grid-cols-4  gap-4">
+            <!-- Task Card -->
+            <div class="bg-blue-50 p-4 w-56 rounded-xl flex items-center space-x-4">
+                <img class="w-12 h-12 object-contain p-2 bg-white rounded-lg" 
+                     src="./assets/checkbox.png" 
+                     alt="">
+                <div>
+                    <h2 class="text-gray-500 text-sm">Task Assigned</h2>
+                    <p class="text-2xl font-bold">05</p>
+                </div>
             </div>
-    
-            <div  class="bg-blue-50">
-                <img src="./assets/board.png" alt="">
-                <h3>Discover Something <br> New Today!</h3>
+
+
+            <!-- Discover Card -->
+            <div id="discover-card" class="bg-blue-500 p-4 rounded-xl flex items-center space-x-4">
+                <img 
+                     src="./assets/board.png" 
+                     alt="">
+                <div>
+                    <h2 class="text-white">Discover Something <br> New Today!</h2>
+                </div>
             </div>
-    
-            <div class="bg-blue-50">
-                <img src="./assets/calender.png" alt="">
-                <h5>Wed, <br> <span class="font-semibold">Jul 28 2025</span>  </h5>
+
+
+            <!-- Calendar Card -->
+            <div class=" bg-blue-50 p-4 w-56 rounded-xl flex items-center space-x-4">
+                <img class="w-12 h-12 object-contain p-2 bg-white rounded-lg"
+                     src="./assets/calender.png" 
+                     alt="">
+                <div>
+                    <h2 class="text-gray-500 text-sm">Wed</h2>
+                    <p class="text-lg font-semibold">Jul 28 2025</p>
+                </div>
             </div>
-    
-            <div class="">
-                <div class="bg-blue-50 ">
-                    <img  src="./assets/activity.png" alt="">
-                    <h4>Activity Log</h4>
-                    <button class="btn btn-primary">Clear History</button>
+
+
+            <!-- Activity Card -->
+            <div class="bg-blue-50  p-4 rounded-xl">
+                <div class="flex justify-center items-center space-x-2 mb-4">
+                    <img class="w-8 h-8 object-contain" 
+                         src="./assets/activity.png" 
+                         alt="">
+                    <h2 class="text-lg font-semibold">Activity Log</h2>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                        Clear History
+                    </button>
                 </div>
             </div>
         </section>
     </header>
-    <main>
+
+    <!-- Main Section -->
+    <main class="grid grid-cols-3">
+<!-- Cards -->
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Shop Ease</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Fix Mobile Button Issue </h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">21 March 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Soft Pay</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Add pay success Modal </h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">25 March 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Meta</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Add new reaction 🤲🏻 </h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">31 March 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Programming Hero</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Fix Video Loading Issue </h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">21 March 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Google LLC</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Integrate Ai search </h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">1 April 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Polygon Tech</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Review Ami Probashi Site</h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">5 May 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Shop Ease</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Fix Mobile Button Issue </h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">21 March 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Shop Ease</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Fix Mobile Button Issue </h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">21 March 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+
+        <div class="bg-blue-50 rounded-lg p-6 w-80 mb-5">
+            <div class="mb-4">
+                <div class="bg-white text-gray-800 px-2 py-1 rounded-full w-fit">Shop Ease</div>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold mb-2">Fix Mobile Button Issue </h2>
+                <p class="bg-white rounded-md p-2 m-1">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500">Deadline</p>
+                <p class=" text-gray-800 font-semibold">21 March 2025</p>
+              </div>
+              <div class="flex justify-end">
+                <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                    Completed
+                </button>
+              </div>
+        </div>
+
+
+
+
+
+        
 
     </main>
+    <script src="./script/discover.js"></script>
 </body>
 </html>
+
+
+

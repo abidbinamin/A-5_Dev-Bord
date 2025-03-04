@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head class="bg-slate-50">
+<body >
+    <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between rounded-l-xl items-center shadow-sm gap-4">
+        <div class="flex  p-4 rounded-2xl items-center space-x-2">
+            <img class="w-8 h-8 object-contain" src="./assets/logo.png" alt="">
+            <h1 class="text-2xl bg-blue-50">
+                <span class="font-mono text-gray-400">Dev</span>
+                <span class="font-bold">Board</span>
+            </h1>
+        </div>
+
+        
+        <div class="flex items-center gap-4">
+            <button class=" px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                Back to Desk
+            </button>
+        </div>
+
+    </nav>
+<h1 class="text-2xl font-black flex justify-center p-4">Blogs</h1>
+<main>
+
+    <div class="bg-base-100 border border-base-300 p-4 mx-15 rounded-md mb-5">
+        <div class="font-bold m-1 shadow-sm ">Question-1: What are the different ways to select an element in the DOM?</div>
+        <div class="text-sm font-semibold text-gray-400 p-3">There are few different ways to select element in the DOM:<br>
+            * document.getElementById; Finds any elements by its unique ID.  <br>
+            * document.getElementsByClassName; Selects elements by their ClassName . <br>
+            * document.getElementsByTagName; Selects elements by their HTML tag
+        </div>
+      </div>
+
+      <div class="bg-base-100 border border-base-300 p-4 mx-15 rounded-md mb-5">
+        <div class="font-bold m-1 shadow-sm ">Question-2: What is the difference between innerHTML, innerText, and textContent ?</div>
+        <div class="text-sm font-semibold text-gray-400 p-3">* innerHTML: Shows all content inside an element, including HTML tags.  <br>
+        * innerText: Displays only the visible text,it mainly fucuses on what is actually displayed on the screen.  <br>
+    * textContent: Shows every bit of text, including hidden  part of the code.</div>
+      </div>
+
+      <div class="bg-base-100 border border-base-300 p-4 mx-15 rounded-md mb-5">
+        <div class="font-bold m-1 shadow-sm ">Question-3: What is event delegation in the DOM?</div>
+        <div class="text-sm font-semibold text-gray-400 p-3">Event delegation is like having a smart event listener! Instead of adding listeners to every button or link, it attach one to a parent element (like a container). When a child is clicked, the event "bubbles up" to the parent, so we can check which child triggered it. Saves time and works for dynamic content!</div>
+      </div>
+
+      <div class="bg-base-100 border border-base-300 p-4 mx-15 rounded-md mb-5">
+        <div class="font-bold m-1 shadow-sm ">Question-4: What is event bubbling in the DOM?</div>
+        <div class="text-sm font-semibold text-gray-400 p-3">Event bubbling means when an event happens on an element, it first runs handlers on that element, then on its parent.</div>
+      </div>
+
+      <div class="bg-base-100 border border-base-300 p-4 mx-15 rounded-md mb-5">
+        <div class="font-bold m-1 shadow-sm ">Question-5: How do you create, add, and remove elements using JavaScript?</div>
+        <div class="text-sm font-semibold text-gray-400 p-3">* To create a new element, we use document.createElement()  <br>
+        * To add it, we can use parentElement.appendChild()  <br>
+    * To remove an element, we can use elementToRemove.remove()</div>
+      </div>
+      
+</main>
+</body>
+</html>
